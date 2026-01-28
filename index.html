@@ -45,8 +45,25 @@
     }
 
     .hero {
+      position: relative;
       text-align: center;
-      padding: 80px 20px;
+      color: #ffffff;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      filter: brightness(0.65);
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 800px;
+      padding: 0 20px;
     }
 
     .hero h1 {
@@ -57,7 +74,7 @@
 
     .hero p {
       font-size: 18px;
-      color: #6b7280;
+      color: #e5e7eb;
     }
 
     section {
@@ -72,6 +89,18 @@
     h2 {
       font-size: 28px;
       margin-bottom: 20px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .split img {
+      width: 100%;
+      border-radius: 4px;
     }
 
     .services {
@@ -101,7 +130,11 @@
       margin: 6px 0;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
+      .split {
+        grid-template-columns: 1fr;
+      }
+
       .hero h1 {
         font-size: 28px;
       }
@@ -120,22 +153,33 @@
   </div>
 </header>
 
+<!-- HERO -->
 <div class="hero">
-  <h1>Professional Business Consulting</h1>
-  <p>Reliable B2B services for international cooperation</p>
+  <img src="hero.jpg" alt="Corporate business environment">
+  <div class="hero-text">
+    <h1>Professional Business Consulting</h1>
+    <p>Reliable B2B services for international cooperation</p>
+  </div>
 </div>
 
+<!-- ABOUT -->
 <section class="white">
-  <div class="container">
-    <h2>About the Company</h2>
-    <p>
-      Euromax Business Solutions sp. z o.o. is a Poland-based company providing
-      professional consulting and operational support services for international
-      business partners. We focus on compliance, clarity, and long-term cooperation.
-    </p>
+  <div class="container split">
+    <div>
+      <h2>About the Company</h2>
+      <p>
+        Euromax Business Solutions sp. z o.o. is a Poland-based company providing
+        professional consulting and operational support services for international
+        business partners. We focus on compliance, clarity, and long-term cooperation.
+      </p>
+    </div>
+    <div>
+      <img src="office.jpg" alt="Modern office environment">
+    </div>
   </div>
 </section>
 
+<!-- SERVICES -->
 <section>
   <div class="container">
     <h2>Services</h2>
@@ -156,6 +200,7 @@
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="white">
   <div class="container">
     <h2>Contact</h2>
