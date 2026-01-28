@@ -2,64 +2,170 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Euromax Business Solutions</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Euromax Business Solutions sp. z o.o.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    :root {
+      --primary: #1f4fd8;
+      --dark: #1f2937;
+      --light: #f9fafb;
+      --gray: #6b7280;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f5f7fa;
-      color: #333;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: #ffffff;
+      line-height: 1.6;
     }
+
     header {
-      background: #0b3c5d;
-      color: white;
-      padding: 20px;
-      text-align: center;
+      background: var(--light);
+      border-bottom: 1px solid #e5e7eb;
     }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: #ffffff;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: var(--gray);
+      font-size: 18px;
+    }
+
     section {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
+      background: var(--light);
+      margin-top: 40px;
     }
+
+    section.white {
+      background: #ffffff;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service-box {
+      background: #ffffff;
+      padding: 25px;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+    }
+
     footer {
-      background: #eee;
-      text-align: center;
-      padding: 15px;
+      background: var(--dark);
+      color: #ffffff;
       font-size: 14px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Euromax Business Solutions sp. z o.o.</h1>
-  <p>Reliable B2B Consulting & Business Services</p>
+  <div class="container">
+    <div class="logo">Euromax Business Solutions</div>
+  </div>
 </header>
 
+<div class="hero">
+  <h1>Professional Business Services</h1>
+  <p>Reliable B2B solutions for international partners</p>
+</div>
+
+<section class="white">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>
+      Euromax Business Solutions sp. z o.o. is a Poland-based company providing
+      professional B2B services to international clients. We focus on efficiency,
+      compliance, and long-term cooperation.
+    </p>
+  </div>
+</section>
+
 <section>
-  <h2>About Us</h2>
-  <p>
-    Euromax Business Solutions provides professional B2B services for international
-    clients, focusing on efficiency, compliance, and long-term partnerships.
-  </p>
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-box">
+        <h3>B2B Consulting</h3>
+        <p>Business advisory services supporting international cooperation and growth.</p>
+      </div>
+      <div class="service-box">
+        <h3>Operational Support</h3>
+        <p>Support for business processes, coordination, and administrative activities.</p>
+      </div>
+      <div class="service-box">
+        <h3>International Services</h3>
+        <p>Services tailored for cross-border business relationships and EU operations.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <h2>Our Services</h2>
-  <ul>
-    <li>B2B Consulting</li>
-    <li>Business Process Support</li>
-    <li>International Cooperation</li>
-  </ul>
-
-  <h2>Contact</h2>
-  <p>
-    Email: contact@euromaxbizsol.com<br>
-    Poland
-  </p>
+<section class="white">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>
+      Email: <a href="mailto:contact@euromaxbizsol.com">contact@euromaxbizsol.com</a><br />
+      Location: Poland
+    </p>
+  </div>
 </section>
 
 <footer>
-  © 2026 Euromax Business Solutions sp. z o.o.
+  <div class="container">
+    <p><strong>Euromax Business Solutions sp. z o.o.</strong></p>
+    <p>Registered in Poland</p>
+    <p>© 2026 Euromax Business Solutions</p>
+  </div>
 </footer>
 
 </body>
