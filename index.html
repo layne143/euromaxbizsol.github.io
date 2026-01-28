@@ -16,34 +16,11 @@
       line-height: 1.6;
     }
 
+    /* HEADER */
     header {
       border-bottom: 1px solid #e5e7eb;
       background: #ffffff;
     }
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  height: 40px;
-}
-
-.logo span {
-  font-size: 28px;
-  font-weight: 500;
-}
-
-
-.logo strong {
-  color: #2563eb;
-  text-shadow:
-    0 0 2px rgba(37, 99, 235, 0.6),
-    0 0 6px rgba(37, 99, 235, 0.4),
-    0 0 12px rgba(37, 99, 235, 0.25);
-}
-
 
     .container {
       max-width: 1100px;
@@ -56,23 +33,42 @@
       align-items: center;
       justify-content: space-between;
     }
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
 
-    .nav img {
-      height: 32px;
-      max-width: 100%;
+    .nav-links {
+      display: flex;
+      gap: 20px;
     }
 
     .nav a {
-      margin-left: 20px;
       text-decoration: none;
       color: #1f2937;
       font-size: 14px;
     }
 
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .logo span {
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    .logo strong {
+      color: #2563eb;
+      text-shadow:
+        0 0 2px rgba(37, 99, 235, 0.6),
+        0 0 6px rgba(37, 99, 235, 0.4),
+        0 0 12px rgba(37, 99, 235, 0.25);
+    }
+
+    /* HERO */
     .hero {
       position: relative;
       text-align: center;
@@ -85,33 +81,6 @@
       object-fit: cover;
       filter: brightness(0.65);
     }
-
-    .about-wrapper {
-  display: flex;
-  gap: 32px;
-  align-items: center;
-}
-
-.about-text {
-  flex: 1;
-}
-
-.about-image {
-  flex: 1;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 6px;
-}
-
-@media (max-width: 800px) {
-  .about-wrapper {
-    flex-direction: column;
-  }
-}
-
-
 
     .hero-text {
       position: absolute;
@@ -133,33 +102,87 @@
       color: #e5e7eb;
     }
 
-   section {
-   padding: 30px 20px;
-  background: #f9fafb;
-}
-
+    /* SECTIONS */
+    section {
+      padding: 32px 20px;
+      background: #f9fafb;
+    }
 
     section.white {
       background: #ffffff;
     }
 
     h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
+      font-size: 30px;
+      margin-bottom: 24px;
     }
 
+    /* ABOUT */
+    .about-wrapper {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .about-text,
+    .about-image {
+      flex: 1;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* SERVICES – ENHANCED */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+      gap: 28px;
     }
 
     .service {
       background: #ffffff;
       border: 1px solid #e5e7eb;
-      padding: 30px;
+      padding: 36px 32px;
+      border-radius: 12px;
+      position: relative;
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
     }
 
+    .service::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, #2563eb, #1e40af);
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+
+    .service:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transform: translateY(-4px);
+    }
+
+    .service-icon {
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    .service h3 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .service p {
+      font-size: 15px;
+      color: #374151;
+    }
+
+    /* FOOTER */
     footer {
       background: #1f2937;
       color: #ffffff;
@@ -175,37 +198,40 @@
       margin: 6px 0;
     }
 
+    /* RESPONSIVE */
     @media (max-width: 800px) {
       .hero h1 {
         font-size: 28px;
       }
+
+      .about-wrapper {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
+
 <body>
 
 <header>
-<div class="container nav">
-  <div class="logo">
-    <img src="favicon.ico" alt="Euromax logo icon" />
-    <span><strong>EUROMAX</strong> Business Solutions</span>
+  <div class="container nav">
+    <div class="logo">
+      <img src="favicon.ico" alt="Euromax logo icon" />
+      <span><strong>EUROMAX</strong> Business Solutions</span>
+    </div>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
   </div>
-
-  <div class="nav-links">
-    <a href="/">Home</a>
-    <a href="privacy.html">Privacy Policy</a>
-  </div>
-</div>
-
 </header>
 
 <!-- HERO -->
 <div class="hero">
   <img src="hero.jpg" alt="Corporate business environment">
   <div class="hero-text">
-  <h1>Corporate &amp; IT Services for International Businesses</h1>
-<p>Operational and technology support for cross-border companies</p>
-
+    <h1>Corporate &amp; IT Services for International Businesses</h1>
+    <p>Operational and technology support for cross-border companies</p>
   </div>
 </div>
 
@@ -213,24 +239,18 @@
 <section class="white">
   <div class="container">
     <h2>About the Company</h2>
-
     <div class="about-wrapper">
       <div class="about-text">
         <p>
           <strong>Euromax Business Solutions sp. z o.o.</strong> is a Warsaw-based company
           registered in Poland under KRS number <strong>0001177148</strong>.
-          The company operates as a limited liability company
-          (Spółka z ograniczoną odpowiedzialnością) and provides
-          professional business-to-business (B2B) operational and consulting services.
+          The company operates as a limited liability company and provides
+          professional B2B operational and consulting services.
         </p>
-
         <p>
           Our registered office is located at <strong>ul. Domaniewska 47, Warsaw, Poland</strong>.
-          We support corporate clients with a wide range of IT, administrative,
-          and operational services tailored to modern business environments.
         </p>
       </div>
-
       <div class="about-image">
         <img src="office.jpg" alt="Euromax Business Solutions office in Warsaw" />
       </div>
@@ -238,28 +258,31 @@
   </div>
 </section>
 
-
-
 <!-- SERVICES -->
 <section>
   <div class="container">
     <h2>Business Profile & Services</h2>
     <div class="services">
       <div class="service">
+        <div class="service-icon">💻</div>
         <h3>IT Consulting & Platforms</h3>
         <p>
           Microsoft Power Platform, Dynamics, SharePoint, AI Copilot,
           Azure AI services, and enterprise application support.
         </p>
       </div>
+
       <div class="service">
+        <div class="service-icon">🛠️</div>
         <h3>IT & Technical Support</h3>
         <p>
           Computer repair and maintenance, hardware and software support,
           system troubleshooting, and ongoing IT services.
         </p>
       </div>
+
       <div class="service">
+        <div class="service-icon">📊</div>
         <h3>Financial & Administrative Support</h3>
         <p>
           Operational, financial, and administrative assistance
@@ -297,7 +320,6 @@
     <p>© 2026 Euromax Business Solutions</p>
   </div>
 </footer>
-
 
 </body>
 </html>
