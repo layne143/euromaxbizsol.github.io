@@ -72,17 +72,18 @@ header {
 .nav-links .cta:hover { background: var(--grad); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(99,102,241,0.5); }
 
 /* ===== Hero ===== */
-.hero { position: relative; padding: 140px 0 120px; text-align: center; overflow: hidden; }
+.hero { position: relative; padding: 140px 0 120px; text-align: center; overflow: hidden; isolation: isolate; }
 .hero-video {
   position: absolute; inset: 0; width: 100%; height: 100%;
-  object-fit: cover; z-index: -2; opacity: 0.55;
+  object-fit: cover; z-index: 0; opacity: 0.85;
 }
 .hero-overlay {
-  position: absolute; inset: 0; z-index: -1;
+  position: absolute; inset: 0; z-index: 1;
   background:
-    radial-gradient(ellipse at center, transparent 0%, rgba(10,14,26,0.85) 80%),
-    linear-gradient(180deg, rgba(10,14,26,0.55) 0%, rgba(10,14,26,0.95) 100%);
+    radial-gradient(ellipse at center, rgba(10,14,26,0.15) 0%, rgba(10,14,26,0.65) 75%),
+    linear-gradient(180deg, rgba(10,14,26,0.20) 0%, rgba(10,14,26,0.85) 100%);
 }
+.hero .container { position: relative; z-index: 2; }
 .hero .pill {
   display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px;
   background: var(--surface); border: 1px solid var(--border); border-radius: 999px;
