@@ -1,127 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Legal Notice | Euromax Business Solutions sp. z o.o.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/favicon.ico">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #1f2937;
-      line-height: 1.6;
-    }
-
-    header {
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    a {
-      color: #1f4fd8;
-      text-decoration: none;
-    }
-
-    h1, h2 {
-      margin-top: 30px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<title>Legal Notice | Euromax Business Solutions sp. z o.o.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#0a0e1a; --surface:rgba(255,255,255,0.04); --surface-strong:rgba(255,255,255,0.08);
+  --border:rgba(255,255,255,0.10); --text:#e8eaf2; --text-muted:#9aa0b4;
+  --grad:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#06b6d4 100%);
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;overflow-x:hidden;}
+.mesh{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;}
+.mesh::before,.mesh::after{content:'';position:absolute;border-radius:50%;filter:blur(120px);opacity:0.4;animation:float 20s ease-in-out infinite;}
+.mesh::before{width:500px;height:500px;background:#6366f1;top:-200px;left:-150px;}
+.mesh::after{width:600px;height:600px;background:#8b5cf6;bottom:-200px;right:-150px;animation-delay:-10s;}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(40px,-30px) scale(1.05);}}
+.container{max-width:880px;margin:0 auto;padding:0 24px;}
+header{position:sticky;top:0;z-index:100;backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);background:rgba(10,14,26,0.65);border-bottom:1px solid var(--border);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo img{height:38px;width:auto;filter:drop-shadow(0 0 12px rgba(99,102,241,0.5));}
+.logo .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:19px;letter-spacing:-0.01em;color:#fff;}
+.logo .brand .accent{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.back{color:var(--text-muted);text-decoration:none;font-size:14px;font-weight:500;padding:8px 14px;border-radius:8px;background:var(--surface);border:1px solid var(--border);transition:color 0.2s,background 0.2s;}
+.back:hover{color:#fff;background:var(--surface-strong);}
+.doc{margin:60px auto;padding:48px 44px;background:var(--surface);border:1px solid var(--border);border-radius:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);}
+.eyebrow{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:8px;}
+h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(30px,4vw,42px);line-height:1.15;letter-spacing:-0.02em;margin:0 0 24px;color:#fff;}
+h2{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:21px;color:#fff;margin:36px 0 12px;padding-top:24px;border-top:1px solid var(--border);}
+h2:first-of-type{border-top:none;padding-top:0;}
+p{color:var(--text-muted);font-size:16px;margin:0 0 14px;}
+p strong{color:#fff;font-weight:600;}
+a{color:#a78bfa;text-decoration:none;}
+a:hover{color:#c4b5fd;text-decoration:underline;}
+footer{padding:40px 0 30px;border-top:1px solid var(--border);margin-top:40px;}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;color:var(--text-muted);font-size:13px;}
+.foot strong{color:#fff;}
+.foot a{color:var(--text-muted);margin-left:16px;}
+.foot a:hover{color:#fff;}
+@media(max-width:600px){.doc{padding:32px 24px;margin:30px auto;}}
+</style>
 </head>
 <body>
+<div class="mesh"></div>
 
 <header>
-  <div class="container">
-    <a href="/">← Back to Home</a>
+  <div class="container nav">
+    <a href="/" class="logo">
+      <img src="logo-icon.png" alt="Euromax logo" />
+      <span class="brand">Euro<span class="accent">max</span></span>
+    </a>
+    <a href="/" class="back">← Back to Home</a>
   </div>
 </header>
 
 <div class="container">
-  <h1>Legal Notice / Imprint</h1>
+  <div class="doc">
+    <span class="eyebrow">Legal</span>
+    <h1>Legal Notice / Imprint</h1>
 
-  <p>
-    This legal notice applies to the website operated by
-    <strong>Euromax Business Solutions sp. z o.o.</strong>
-  </p>
+    <p>This legal notice applies to the website operated by <strong>Euromax Business Solutions sp. z o.o.</strong></p>
 
-  <h2>Company Information</h2>
-  <p>
-    Company name: <strong>Euromax Business Solutions sp. z o.o.</strong><br>
+    <h2>Company Information</h2>
+    <p>Company name: <strong>Euromax Business Solutions sp. z o.o.</strong><br>
     Legal form: Limited Liability Company (Spółka z ograniczoną odpowiedzialnością)<br>
     Registered office: ul. Domaniewska 47, 02-672 Warsaw, Poland<br>
     Registration court: District Court for the Capital City of Warsaw<br>
     KRS number: <strong>0001177148</strong><br>
     NIP: <strong>5214120342</strong><br>
-    REGON: <strong>54195900500000</strong>
-  </p>
+    REGON: <strong>54195900500000</strong></p>
 
-  <h2>Contact</h2>
-  <p>
-    Email: <a href="mailto:euromaxbizsol@gmail.com">euromaxbizsol@gmail.com</a><br>
-    Phone: +48 505 916 568
-  </p>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:euromaxbizsol@gmail.com">euromaxbizsol@gmail.com</a><br>
+    Phone: +48 505 916 568</p>
 
-  <h2>Business Activity</h2>
-  <p>
-    Euromax Business Solutions sp. z o.o. provides business-to-business (B2B) services,
-    including IT consulting, application and hardware support, Microsoft Power Platform,
-    Dynamics, SharePoint, AI and Azure-related services, as well as operational support
-    for accounting systems and ERP-based financial and administrative processes.
-  </p>
+    <h2>Business Activity</h2>
+    <p>Euromax Business Solutions sp. z o.o. provides business-to-business (B2B) services, including IT consulting, application and hardware support, Microsoft Power Platform, Dynamics, SharePoint, AI and Azure-related services, as well as operational support for accounting systems and ERP-based financial and administrative processes.</p>
 
-  <h2>Liability for Content</h2>
-  <p>
-    The information on this website is provided for general informational purposes only.
-    While we strive to keep the content accurate and up to date, we make no warranties
-    or representations of any kind, express or implied, about the completeness, accuracy,
-    reliability, or suitability of the information provided.
-  </p>
+    <h2>Liability for Content</h2>
+    <p>The information on this website is provided for general informational purposes only. While we strive to keep the content accurate and up to date, we make no warranties or representations of any kind, express or implied, about the completeness, accuracy, reliability, or suitability of the information provided.</p>
+    <p>Any reliance you place on such information is strictly at your own risk. In no event shall Euromax Business Solutions sp. z o.o. be liable for any loss or damage arising out of or in connection with the use of this website.</p>
 
-  <p>
-    Any reliance you place on such information is strictly at your own risk. In no event
-    shall Euromax Business Solutions sp. z o.o. be liable for any loss or damage arising
-    out of or in connection with the use of this website.
-  </p>
+    <h2>Liability for Links</h2>
+    <p>This website may contain links to external websites. We have no control over the content of those websites and therefore cannot accept any liability for external content. The respective provider or operator of the linked pages is always responsible for their content.</p>
 
-  <h2>Liability for Links</h2>
-  <p>
-    This website may contain links to external websites. We have no control over the
-    content of those websites and therefore cannot accept any liability for external
-    content. The respective provider or operator of the linked pages is always responsible
-    for their content.
-  </p>
+    <h2>Intellectual Property</h2>
+    <p>All content on this website, including text, graphics, logos, and images, is the property of Euromax Business Solutions sp. z o.o., unless otherwise stated, and is protected by applicable copyright and intellectual property laws.</p>
+    <p>Some visual elements on this website are illustrative in nature and may include stock or AI-generated images used for presentation purposes only.</p>
+    <p>Any reproduction, distribution, or use of content from this website without prior written consent is prohibited.</p>
 
-  <h2>Intellectual Property</h2>
-  <p>
-    All content on this website, including text, graphics, logos, and images, is the
-    property of Euromax Business Solutions sp. z o.o., unless otherwise stated, and is
-    protected by applicable copyright and intellectual property laws.
-  </p>
-
-  <p>
-    Some visual elements on this website are illustrative in nature and may include
-    stock or AI-generated images used for presentation purposes only.
-  </p>
-
-  <p>
-    Any reproduction, distribution, or use of content from this website without prior
-    written consent is prohibited.
-  </p>
-
-  <h2>Applicable Law</h2>
-  <p>
-    This legal notice and the use of this website are governed by the laws of the Republic
-    of Poland. Any disputes arising in connection with this website shall be subject to
-    the exclusive jurisdiction of the Polish courts.
-  </p>
+    <h2>Applicable Law</h2>
+    <p>This legal notice and the use of this website are governed by the laws of the Republic of Poland. Any disputes arising in connection with this website shall be subject to the exclusive jurisdiction of the Polish courts.</p>
+  </div>
 </div>
 
+<footer>
+  <div class="container foot">
+    <div><strong>Euromax Business Solutions sp. z o.o.</strong><br>KRS: 0001177148 &nbsp;|&nbsp; NIP: 5214120342 &nbsp;|&nbsp; REGON: 54195900500000</div>
+    <div>© 2026 Euromax <a href="privacy.html">Privacy</a> <a href="legal.html">Legal Notice</a></div>
+  </div>
+</footer>
 </body>
 </html>
